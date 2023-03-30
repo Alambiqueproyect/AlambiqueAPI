@@ -1,55 +1,52 @@
 ﻿using Data;
 using Entities.Entities;
 using Logic.ILogic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Resources.Enums;
+
 
 namespace Logic.Logic
 {
-    public class UserLogic : BaseContextLogic, IUserLogic
+    public class UserLogic : IUserLogic
     {
-        public UserLogic(ServiceContext serviceContext) : base(serviceContext) { }
-        public void InsertUserItem(UserItem userItem)
+        private readonly ServiceContext _serviceContext;
+        public UserLogic(ServiceContext serviceContext)
         {
+            _serviceContext = serviceContext;
+        }
+        public void DeleteUser(int id)
+        {
+            var userToDelete = _serviceContext.Set<UserItem>()
+                 .Where(u => u.Id == id).First();
+
+            userToDelete.IsActive = false;
+
+            _serviceContext.SaveChanges();
+
+        }
+
+        public List<UserItem> GetAllUsers()
+        {
+            return _serviceContext.Set<UserItem>()
+                .Where(u => u.IsActive == true)
+                .ToList();
+        }
+
+        public int InsertUser(UserItem userItem)
+        {
+            if (userItem.IdRol == (int)UserEnums.Administrator)
+            {
+                throw new InvalidOperationException();
+            };
+
+            userItem.EncryptedToken = "NOT GENERATED";
+
             _serviceContext.Users.Add(userItem);
             _serviceContext.SaveChanges();
+
+            return userItem.Id;
         }
 
-        void IUserLogic.DeleteUser(int Id)
-        {
-            
-            _serviceContext.Users.Remove(_serviceContext.Set<UserItem>().Where(user => user.Id == Id).First());
-            _serviceContext.SaveChanges();
-            
-        }
-
-        List<UserItem> IUserLogic.GetAll()
-        {
-            var userlist = _serviceContext.Users.ToList();
-            return userlist; 
-        }
-
-        List<UserItem> IUserLogic.GetUserByCriteria(int Id)
-        {
-            var listuser = new UserItem();
-            listuser.Id = Id;
-
-            var resultList = _serviceContext.Set<UserItem>()
-                                .Where(u => u.Id == Id);
-
-            if (listuser.Id == Id)
-            {
-                resultList = resultList.Where(u => u.Id == Id);
-            }
-
-
-            return resultList.ToList();
-        }
-
-        void IUserLogic.UpdateUser(UserItem userItem)
+        public void UpdateUser(UserItem userItem)
         {
             _serviceContext.Users.Update(userItem);
             _serviceContext.SaveChanges();

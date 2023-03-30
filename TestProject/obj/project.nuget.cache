@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "nJvWrVWdA+bwyrh+FwLGzsZhUlcLWjQpoo55y9+1d9BrxQ8fqaeEcexwjTzjCemcXHatfwpgewAv15HuySSHqQ==",
+  "dgSpecHash": "ym+txhOLIT6oAsTYzUCfExEHnp/P1nnYqxGv0hSQoNhGOUO4RxlxDWfUpl5BAQ6qQg3Oj973nEtGt9f5U95Urg==",
   "success": true,
   "projectFilePath": "C:\\Users\\juanc\\FactoriaF5-proyectos\\Proyectos\\Alambique\\AlambiqueAPI\\TestProject\\TestProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanc\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\juanc\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\juanc\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\juanc\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\juanc\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\juanc\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",

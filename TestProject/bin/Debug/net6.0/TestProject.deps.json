@@ -53,6 +53,14 @@
           }
         }
       },
+      "BCrypt.Net-Next/4.0.3": {
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.0.3.0"
+          }
+        }
+      },
       "coverlet.collector/3.1.2": {},
       "Humanizer.Core/2.14.1": {
         "runtime": {
@@ -1788,11 +1796,21 @@
       },
       "Logic/1.0.0": {
         "dependencies": {
+          "BCrypt.Net-Next": "4.0.3",
           "Data": "1.0.0",
-          "Entities": "1.0.0"
+          "Entities": "1.0.0",
+          "Resourcess": "1.0.0"
         },
         "runtime": {
           "Logic.dll": {}
+        }
+      },
+      "Resourcess/1.0.0": {
+        "dependencies": {
+          "Entities": "1.0.0"
+        },
+        "runtime": {
+          "Resourcess.dll": {}
         }
       },
       "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {
@@ -1824,6 +1842,13 @@
       "sha512": "sha512-EycyMsb6rD2PK9P0SyibFfEhvWWttdrYhyPF4f41uzdB/44yQlV+2Wehxyg489Rj6gbPvSPgbKq0xsHJBhipZA==",
       "path": "azure.identity/1.6.0",
       "hashPath": "azure.identity.1.6.0.nupkg.sha512"
+    },
+    "BCrypt.Net-Next/4.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "path": "bcrypt.net-next/4.0.3",
+      "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
     },
     "coverlet.collector/3.1.2": {
       "type": "package",
@@ -2907,6 +2932,11 @@
       "sha512": ""
     },
     "Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Resourcess/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,100 +1,58 @@
 ﻿
 using API.IServices;
-using API.Services;
+using Data;
 using Entities.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Resources.RequestModels;
+using Security.IServices;
 using System.Security.Authentication;
+using System.Web.Http.Cors;
 
 namespace API.Controllers
 {
-    [ApiController]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
+
     [Route("[controller]/[action]")]
     public class UserController : ControllerBase
     {
-        private readonly ISecurityService _securityService;
+        private readonly IUserSecurityService _userSecurityService;
         private readonly IUserService _userService;
-        public UserController(ISecurityService securityService, IUserService userService)
+        public UserController(IUserSecurityService userSecurityService, IUserService userService)
         {
-            _securityService= securityService;
+            _userSecurityService = userSecurityService;
             _userService = userService;
+        }
+        [HttpPost(Name = "LoginUser")]
+        public string Login([FromBody] LoginRequest loginRequest)
+        {
+
+            return _userSecurityService.GenerateAuthorizationToken(loginRequest.UserName, loginRequest.UserPassword);
         }
 
         [HttpPost(Name = "InsertUser")]
-        public int Post([FromQuery] string userName, [FromQuery] string userPassword, [FromBody] UserItem userItem)
+        public int InsertUser([FromBody] NewUserRequest newUserRequest)
         {
-            var validCredentials = _securityService.ValidateUserCredentials(userName, userPassword, 1);
-            if (validCredentials == true)
-            {
-                return _userService.InsertUser(userItem);
-            }
-
-            else
-            {
-                throw new InvalidCredentialException();
-            }
-
-        }
-
-        [HttpDelete(Name = "DeleteUser")]
-        public void Delete([FromQuery] string userName, [FromQuery] string userPassword, [FromQuery] int Id)
-        {
-            var validCredentials = _securityService.ValidateUserCredentials(userName, userPassword, 1);
-            if (validCredentials == true)
-            {
-                _userService.DeleteUser(Id);
-            }
-            else
-            {
-                throw new InvalidCredentialException();
-            }
-        }
-
-        [HttpPatch(Name = "ModifyUser")]
-        public void Patch([FromQuery] string userName,
-                         [FromQuery] string userPassword,
-                         [FromBody] UserItem userItem)
-
-        {
-            var validCredentials = _securityService.ValidateUserCredentials(userName, userPassword, 1);
-            if (validCredentials == true)
-            {
-                _userService.UpdateUser(userItem);
-            }
-            else
-            {
-                throw new InvalidCredentialException();
-            }
-        }
-
-        [HttpGet(Name = "GetUserByCriteria")]
-        public List<UserItem> GetProductByCriteria([FromQuery] string userName, [FromQuery] string userPassword, [FromQuery] int Id)
-        {
-
-            var validCredentials = _securityService.ValidateUserCredentials(userName, userPassword, 1);
-            if (validCredentials == true)
-            {
-
-                return _userService.GetUserByCriteria(Id);
-            }
-            else
-            {
-                throw new InvalidCredentialException();
-            }
+            return _userService.InsertUser(newUserRequest);
         }
 
         [HttpGet(Name = "GetAllUsers")]
-        public List<UserItem> GetAll([FromQuery] string userName, [FromQuery] string userPassword)
+        public List<UserItem> GetAll()
         {
-            var validCredentials = _securityService.ValidateUserCredentials(userName, userPassword, 1);
-            if (validCredentials == true)
-            {
-
-                return _userService.GetAll();
-            }
-            else
-            {
-                throw new InvalidCredentialException();
-            }
+            return _userService.GetAllUsers();
         }
+
+        [HttpPatch(Name = "ModifyUser")]
+        public void Patch([FromBody] UserItem userItem)
+        {
+            _userService.UpdateUser(userItem);
+        }
+
+        [HttpDelete(Name = "DeleteUser")]
+        public void Delete([FromQuery] int id)
+        {
+            _userService.DeleteUser(id);
+        }
+
+      
     }
 }

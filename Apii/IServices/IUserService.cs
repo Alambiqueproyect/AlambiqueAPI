@@ -1,13 +1,14 @@
 ﻿using Entities.Entities;
 
+using Resources.RequestModels;
+
 namespace API.IServices
 {
     public interface IUserService
     {
-        int InsertUser(UserItem userItem);
-        void DeleteUser(int Id);
+        int InsertUser(NewUserRequest newProductRequest);
         void UpdateUser(UserItem userItem);
-        List<UserItem> GetUserByCriteria(int Id);
-        List<UserItem> GetAll();
+        void DeleteUser(int id);
+        List<UserItem> GetAllUsers();
     }
 }

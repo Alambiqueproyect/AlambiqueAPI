@@ -167,3 +167,6 @@ C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\TestProject
 C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\TestProject\obj\Debug\net6.0\TestProject.pdb
 C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\TestProject\obj\Debug\net6.0\TestProject.genruntimeconfig.cache
 C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\TestProject\obj\Debug\net6.0\ref\TestProject.dll
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\TestProject\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\TestProject\bin\Debug\net6.0\Resourcess.dll
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\TestProject\bin\Debug\net6.0\Resourcess.pdb

@@ -1,0 +1,15 @@
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\bin\Debug\net6.0\Resourcess.deps.json
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\bin\Debug\net6.0\Resourcess.dll
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\bin\Debug\net6.0\Resourcess.pdb
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\bin\Debug\net6.0\Entities.dll
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\bin\Debug\net6.0\Entities.pdb
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\obj\Debug\net6.0\Resourcess.csproj.AssemblyReference.cache
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\obj\Debug\net6.0\Resourcess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\obj\Debug\net6.0\Resourcess.AssemblyInfoInputs.cache
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\obj\Debug\net6.0\Resourcess.AssemblyInfo.cs
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\obj\Debug\net6.0\Resourcess.csproj.CoreCompileInputs.cache
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\obj\Debug\net6.0\Resourcess.csproj.CopyComplete
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\obj\Debug\net6.0\Resourcess.dll
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\obj\Debug\net6.0\refint\Resourcess.dll
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\obj\Debug\net6.0\Resourcess.pdb
+C:\Users\juanc\FactoriaF5-proyectos\Proyectos\Alambique\AlambiqueAPI\Resourcess\obj\Debug\net6.0\ref\Resourcess.dll
